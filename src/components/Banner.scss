@@ -1,0 +1,64 @@
+@import "../styles/utils/variables.scss";
+@import "../styles/utils/mixins.scss";
+@import "../styles/utils/keyframes.scss";
+
+.Banner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.Banner--home {
+  margin-bottom: 50px;
+
+  .Banner__image {
+    display: flex;
+    flex-direction: column;
+    position: fixed; // Utiliser position: fixed pour positionner par rapport à la fenêtre du navigateur
+    top: calc(100vh + 10rem);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 700px;
+    max-height: 500px;
+
+    .Banner__title {
+      width: 60%;
+      opacity: .5;
+      transition: opacity 1s ease;
+    }
+
+    .Banner__logo {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      z-index: 100;
+      opacity: .5;
+      transition: all 1s ease;
+    }
+
+    &.isVisible {
+      .Banner__title {
+        opacity: 1;
+      }
+
+      .Banner__logo {
+        opacity: 1;
+        animation: bounceLogo .5s ease-out;
+      }
+    }
+  }
+}

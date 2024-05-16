@@ -1,0 +1,12 @@
+@mixin font {
+  font-family: Khand;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+@mixin background-blur {
+  background: linear-gradient(180deg, rgba(253, 231, 76, .8) 0%, rgba(91, 192, 235, .8) 25%, rgba(155, 197, 61, .8) 100%);
+  backdrop-filter: blur(10px);
+  background-attachment: fixed;
+}

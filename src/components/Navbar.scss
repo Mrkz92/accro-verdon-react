@@ -1,0 +1,61 @@
+@import "../styles/utils/variables.scss";
+@import "../styles/utils/mixins.scss";
+
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    order: 1;
+    margin-right: 0;
+    align-items: center;
+
+    &__menu {
+        display: flex;
+        align-items: center;
+    }
+
+    &__list {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+
+        @media screen and (max-width: 360px) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+
+    &__item {
+        font-size: 20px;
+        color: $darker;
+        text-transform: none;
+        @include font;
+
+        &:hover {
+            scale: 1.1;
+            color: $fourth;
+        }
+
+        a {
+            text-transform: uppercase;
+        }
+    }
+
+    .nav__toggle,
+    .nav__close {
+        font-size: 1.5rem;
+        color: var(--title-color);
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .Navbar__menu {
+        width: 80%;
+        height: 100%;
+        transition: right 0.4s;
+    }
+}

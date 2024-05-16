@@ -1,0 +1,9 @@
+@import "./styles/reset";
+@import "./styles/utils/variables.scss";
+@import "./styles/utils/mixins.scss";
+
+body {
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url(src/assets/pictures/background.jpg);
+}

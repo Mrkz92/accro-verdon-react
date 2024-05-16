@@ -1,0 +1,38 @@
+@import "../styles/utils/variables.scss";
+@import "../styles/utils/mixins.scss";
+
+.Header {
+    background-color: $lighter;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    height: 6rem;
+    margin: .5rem auto;
+    padding: 10px 60px;
+    border-radius: 12px;
+    //user-select: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: .5rem;
+    z-index: 3;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+
+    &::after {
+        content: "";
+        flex-grow: 1;
+    }
+
+    &__logo {
+        width: 122px;
+    }
+
+    &__Navbar {
+        order: 1;
+    }
+}
+
+.Header.hide {
+    top: -6.5rem;
+}
