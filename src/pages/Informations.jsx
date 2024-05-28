@@ -1,11 +1,23 @@
 import Layout from "../components/Layout";
 import Container from "../components/Container";
+import Guidap from "../components/Guidap";
 
 export default function Informations() {
   return (
     <div className="Informations">
       <Layout context="informations">
         <Container context="informations">
+          <div className="Informations__prices Informations__container">
+            <h2>Nos tarifs</h2>
+            <div className="Informations__prices Informations__subContainer">
+              <a href="/reservation">
+                <b>
+                  * Voir dans l'onglet Réservation pour les tarifs individuels
+                  et de groupe. *
+                </b>
+              </a>
+            </div>
+          </div>
           <div className="Informations__hours Informations__container">
             <h2>Nos horaires</h2>
             <div className="hours-description Informations__subContainer">
@@ -17,10 +29,11 @@ export default function Informations() {
                 </b>
               </a>
             </div>
-            {/*
+
             <div className="hours-description Informations__subContainer">
               <h4>Juillet / Août</h4>
               <p>Ouvert tous les jours</p>
+              <p>Pas de départ entre 12h15 et 13h45</p>
             </div>
             <div className="hours-description Informations__subContainer">
               <h4>Vacances scolaires (Pâques / Toussaint)</h4>
@@ -37,7 +50,6 @@ export default function Informations() {
               <h4>En dehors</h4>
               <p>Ouvert tous les week-end et jours fériés</p>
             </div>
-  */}
           </div>
           <div className="Informations__location Informations__container">
             <h2>Où nous trouver</h2>
@@ -78,6 +90,46 @@ export default function Informations() {
                   referrerpolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
+            </div>
+          </div>
+          <div className="Informations__security Informations__container">
+            <h2>Sécurité</h2>
+            <div className="security-description Informations__subContainer">
+              <ul>
+                <li>
+                  Tous les parcours sont équipés de lignes de vie continues
+                  rendant impossible le décrochage des longes tout au long des
+                  parcours.
+                </li>
+                <li>
+                  Les arbres, installations et EPI (baudriers, longes,
+                  poulies...) sont contrôlés tous les ans conformément aux
+                  normes en vigueur.
+                </li>
+                <li>
+                  L’encadrement est assuré par du personnel titulaire du CQP «
+                  Opérateur de Parc Acrobatique en Hauteur ».
+                </li>
+                <li>
+                  Étant une activité de plein air, le parc est susceptible de
+                  fermer en cas de conditions météo défavorables (pluie, vent,
+                  orage, risque incendie élevé).
+                </li>
+                <li>
+                  Une tenue adaptée est nécessaire pour la pratique des
+                  activités (chaussures fermées, torse couvert, cheveux
+                  attachés...).
+                </li>
+                <li>Le poids maximal admissible est de 120 kg.</li>
+              </ul>
+              <a
+                class="rules-link"
+                href="./docs/Panneau_infos_verignon_2022.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <b>* Télécharger les règles générales du parc *</b>
+              </a>
             </div>
           </div>
         </Container>

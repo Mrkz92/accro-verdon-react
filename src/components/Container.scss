@@ -25,15 +25,13 @@
   }
 
   &--home {
-    margin-top: 100vh;
 
     Banner {
       position: relative;
     }
 
     .Container--presentation {
-      margin-top: 400px;
-      margin-bottom: 100px;
+      margin-top: 500px;
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -53,7 +51,7 @@
             display: flex;
             justify-content: center;
             width: fit-content;
-            opacity: 0.5;
+            opacity: 1;
             margin: 20px;
             min-width: 200px;
             max-width: 600px;
@@ -61,19 +59,46 @@
             border-radius: 15px;
             padding: 20px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.5s ease forwards;
+
           }
-        }
-      }
 
+          .presentation1 {
+            animation-delay: 0.2s;
+          }
 
-      #reserveBtn {
-        transform: scale(1.3);
-        border-radius: 100%;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+          .presentation2 {
+            animation-delay: 0.4s;
+          }
 
-        &:hover {
-          transform: scale(1.7);
-          box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+          .presentation3 {
+            animation-delay: 0.6s;
+          }
+
+          .presentation4 {
+            animation-delay: 0.8s;
+          }
+
+          @media (min-width: 810px) {
+            presentation1 {
+              position: relative;
+              left: -15%;
+            }
+
+            .presentation2 {
+              position: relative;
+              left: 15%;
+            }
+
+            .presentation3 {
+              position: relative;
+              left: -15%;
+            }
+
+            .presentation4 {
+              margin: auto;
+            }
+          }
         }
       }
 
@@ -81,27 +106,41 @@
         div>ul>li {
           animation: fadeInUp 0.5s ease forwards;
 
-          &:nth-child(1) {
+          .presentation1 {
             animation-delay: 0.2s;
-            position: relative;
-            left: -15%;
           }
 
-          &:nth-child(2) {
+          .presentation2 {
             animation-delay: 0.4s;
-            position: relative;
-            left: 15%;
           }
 
-          &:nth-child(3) {
+          .presentation3 {
             animation-delay: 0.6s;
-            position: relative;
-            left: -15%;
           }
 
-          &:nth-child(4) {
+          .presentation4 {
             animation-delay: 0.8s;
-            margin: auto;
+          }
+
+          @media (max-width: 800px) {
+            presentation1 {
+              position: relative;
+              left: -15%;
+            }
+
+            .presentation2 {
+              position: relative;
+              left: 15%;
+            }
+
+            .presentation3 {
+              position: relative;
+              left: -15%;
+            }
+
+            .presentation4 {
+              margin: auto;
+            }
           }
         }
       }
@@ -169,46 +208,138 @@
           }
         }
 
-
         &:nth-child(1) {
-          animation-delay: 0.2s;
-          position: relative;
-          left: -15%;
           border-color: $stage1;
           box-shadow: 3px 0px 20px $stage1;
         }
 
         &:nth-child(2) {
-          animation-delay: 0.4s;
-          position: relative;
-          left: 15%;
           border-color: $stage2;
           box-shadow: -3px 0px 20px $stage2;
         }
 
         &:nth-child(3) {
-          animation-delay: 0.6s;
-          position: relative;
-          left: -15%;
           border-color: $stage3;
           box-shadow: 3px 0px 20px $stage3;
         }
 
         &:nth-child(4) {
-          animation-delay: 0.8s;
-          position: relative;
-          left: 15%;
           border-color: $stage4;
-          box-shadow: -3px 0px 20px $stage4
+          box-shadow: -3px 0px 20px $stage4;
         }
 
         &:nth-child(5) {
-          animation-delay: 0.8s;
-          position: relative;
-          left: -15%;
           border-color: $stage5;
           box-shadow: 3px 0px 20px $stage5;
         }
+
+        @media (min-width:1000px) {
+
+          &:nth-child(1) {
+            animation-delay: 0.2s;
+            position: relative;
+            left: -15%;
+            border-color: $stage1;
+            box-shadow: 3px 0px 20px $stage1;
+          }
+
+          &:nth-child(2) {
+            animation-delay: 0.4s;
+            position: relative;
+            left: 15%;
+          }
+
+          &:nth-child(3) {
+            animation-delay: 0.6s;
+            position: relative;
+            left: -15%;
+          }
+
+          &:nth-child(4) {
+            animation-delay: 0.8s;
+            position: relative;
+            left: 15%;
+          }
+
+          &:nth-child(5) {
+            animation-delay: 0.8s;
+            position: relative;
+            left: -15%;
+          }
+        }
+
+        @media (max-width: 1000px) {
+          left: 0;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  &--gallery {
+    display: flex;
+    flex-direction: column;
+    background-color: $lighter;
+    max-width: 1100px;
+    margin: 30px auto;
+    border-radius: 15px;
+    padding: 20px;
+
+    .Gallery__container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+      }
+
+      .Gallery__item {
+        width: 200px;
+        height: 300px;
+        padding-bottom: 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  &--snacking {
+    display: flex;
+    flex-direction: column;
+    background-color: $lighter;
+    max-width: 1100px;
+    margin: 30px auto;
+    border-radius: 15px;
+
+    .imgContainer {
+      object-fit: contain;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+
+      img {
+        overflow: hidden;
+        border-radius: 3%;
+        box-sizing: content-box;
+        width: 100%;
+        object-fit: cover;
       }
     }
   }
@@ -218,6 +349,33 @@
     flex-flow: row wrap;
     padding: 0 40px;
     gap: 20px;
+
+    @media (min-width: 1200px) {
+      width: 1000px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 60px;
+      grid-template-rows: repeat(3, 300px) 1fr;
+
+      .Informations {
+        &__prices {
+          grid-area: 1 / 1 / 2 / 2;
+        }
+
+        &__hours {
+          grid-area: 1 / 2 / 4 / 3;
+        }
+
+        &__location {
+          grid-area: 2 / 1 / 4 / 2;
+        }
+
+        &__security {
+          grid-area: 4 / 1 / 5 / 3;
+        }
+      }
+
+    }
 
     .Informations__container {
       display: flex;
@@ -295,68 +453,162 @@
         }
       }
     }
-  }
 
-  &--gallery {
-    display: flex;
-    flex-direction: column;
-    background-color: $lighter;
-    max-width: 1100px;
-    margin: 30px auto;
-    border-radius: 15px;
-    padding: 20px;
+    .Informations__security {
+      display: flex;
+      flex-direction: column;
+      background-color: $lighter;
+      max-width: 1100px;
+      margin: 30px auto;
+      border-radius: 15px;
 
-    .Gallery__container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 20px;
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        list-style-type: disc;
 
-      @media (max-width: 768px) {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      @media (max-width: 480px) {
-        grid-template-columns: 1fr;
-      }
-
-      .Gallery__item {
-        width: 200px;
-        height: 300px;
-        padding-bottom: 100%;
-        position: relative;
-        overflow: hidden;
-        border-radius: 15px;
-
-        img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+        li {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+          font-size: 1.1rem;
+          font-weight: 600;
+          line-height: 2rem;
         }
       }
     }
   }
 
-  &--security {
+  &--reservation {
+    background-color: $lighter;
+    max-width: 1100px;
+    width: 100%;
+    margin: 30px auto;
+    border-radius: 15px;
+    max-height: fit-content;
+
+    .Reservation__container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr 5fr;
+      gap: 50px;
+
+      @media (max-width:800px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 5fr;
+
+        .Reservation__part {
+
+          &--solo {
+            grid-area: 1 / 1 / 2 / 2;
+          }
+
+          &--group {
+            grid-area: 2 / 1 / 3 / 2;
+          }
+
+          &--event {
+            grid-area: 3 / 1 / 4 / 2;
+          }
+        }
+      }
+    }
+
+    .Reservation__part {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .title__group {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      &--solo {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+
+      &--group {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+
+      &--event {
+        grid-area: 2 / 1 / 3 / 3;
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+
+        img {
+          max-width: 800px;
+          width: 100%;
+        }
+      }
+    }
+
+    .Reservation__grid {
+      display: grid;
+      grid-template-columns: 200px 100px;
+      grid-template-rows: repeat(3, 50px);
+      border: solid 2px;
+      background-color: $lighter;
+
+      .cell {
+        border: solid 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: x-large;
+      }
+
+      .ages {
+        display: grid;
+
+        &1 {
+          grid-area: 1 / 1 / 2 / 2;
+        }
+
+        &2 {
+          grid-area: 2 / 1 / 3 / 2;
+        }
+
+        &3 {
+          grid-area: 3 / 1 / 4 / 2;
+        }
+      }
+
+      .price {
+        display: grid;
+
+        &1 {
+          grid-area: 1 / 2 / 2 / 3;
+        }
+
+        &2 {
+          grid-area: 2 / 2 / 3 / 3;
+        }
+
+        &3 {
+          grid-area: 3 / 2 / 4 / 3;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    max-width: 640px;
+  }
+
+  &--notFound,
+  &--mentions {
     display: flex;
     flex-direction: column;
     background-color: $lighter;
     max-width: 1100px;
     margin: 30px auto;
     border-radius: 15px;
-
-    li {
-      list-style: disc;
-      font-size: 1.1rem;
-      font-weight: 600;
-      line-height: 2rem;
-      padding-bottom: 30px;
-    }
-  }
-
-  @media screen and (max-width: 700px) {
-    max-width: 640px;
+    height: inherit;
   }
 }

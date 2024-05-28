@@ -29,7 +29,7 @@ export default function Header({ children }) {
       <Link className="Header__link" to="/">
         <img src={logo} alt="Accro Verdon" className="Header__logo" />
       </Link>
-      <Navbar className="Header__Navbar" />
+      <Navbar className={`Header__navbar ${isVisible ? "show" : "hide"}`} />
       {children}
     </div>
   );

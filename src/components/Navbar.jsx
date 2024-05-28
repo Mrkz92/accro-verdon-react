@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { IoClose, IoMenu } from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
 import "./Navbar.scss";
 
 const Navbar = () => {
@@ -16,9 +16,6 @@ const Navbar = () => {
 
   return (
     <nav className="Navbar">
-      <button className="Navbar__menu" onClick={toggleMenu}>
-        Menu
-      </button>
       <ul className={`Navbar__list ${isOpen ? "Navbar__list--open" : ""}`}>
         <li className="Navbar__item">
           <NavLink className="Navbar__link" to="/" onClick={closeMenuOnMobile}>
@@ -61,6 +58,7 @@ const Navbar = () => {
             Informations
           </NavLink>
         </li>
+        {/*
         <li className="Navbar__item">
           <NavLink
             className="Navbar__link"
@@ -70,20 +68,28 @@ const Navbar = () => {
             Sécurité
           </NavLink>
         </li>
+      */}
         <li className="Navbar__item">
           <NavLink
             className="Navbar__link"
             to="/reservation"
             onClick={closeMenuOnMobile}
-          ></NavLink>
+          >
+            Réservation
+          </NavLink>
         </li>
       </ul>
       <guidap-cart-button></guidap-cart-button>
-      <div className="nav__close" id="nav-close" onClick={toggleMenu}>
-        <IoClose />
-      </div>
-      <div className="nav__toggle" id="nav-toggle" onClick={toggleMenu}>
-        <IoMenu />
+      <div className="menuBtn">
+        {isOpen ? (
+          <div className="nav__close" id="nav-close" onClick={toggleMenu}>
+            <IoClose />
+          </div>
+        ) : (
+          <div className="nav__toggle" id="nav-toggle" onClick={toggleMenu}>
+            <span>Menu</span>
+          </div>
+        )}
       </div>
     </nav>
   );

@@ -2,15 +2,15 @@
 @import "../styles/utils/mixins.scss";
 
 .Guidap {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: sticky;
+    bottom: 2rem;
+    right: 2rem;
+    margin-left: auto;
+    transition: all 0.3s;
 
-    &--home {
-        position: relative;
-        margin-top: 100vh;
+    &:hover {
+        cursor: pointer;
+        transform: translate(-10%, -10%);
+        transform-origin: bottom right;
     }
 }

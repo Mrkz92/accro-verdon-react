@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import Container from "../components/Container";
 import parkMap from "../assets/pictures/park-map.png";
+import Guidap from "../components/Guidap";
 
 export default function Stages() {
   return (

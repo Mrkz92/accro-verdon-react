@@ -1,8 +1,8 @@
-@mixin font {
-  font-family: Khand;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0;
+@mixin font($font-family: Khand, $font-style: normal, $font-weight: 400, $letter-spacing: 0) {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
 }
 
 @mixin background-blur {

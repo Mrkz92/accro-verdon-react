@@ -4,6 +4,7 @@ import Snacking from "./pages/Snacking";
 import Gallery from "./pages/GalleryPage";
 import Informations from "./pages/Informations";
 import Security from "./pages/Security";
+import Reservation from "./pages/Reservation";
 import Mentions from "./pages/Mentions";
 import NotFound from "./pages/NotFound";
 
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
   {
     path: "/security",
     element: <Security />,
+  },
+  {
+    path: "/reservation",
+    element: <Reservation />,
   },
   {
     path: "/mentions",

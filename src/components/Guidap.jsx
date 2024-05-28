@@ -4,7 +4,7 @@ import "./Guidap.scss";
 export default function Guidap() {
   return (
     <div className="Guidap">
-      <guidap-activity-reserve-button activity-uuid="3YfW1T6xg9cknsdi4azlptLJPrIKeXH0oQDm"></guidap-activity-reserve-button>
+      <guidap-activity-details-button activity-uuid="X6eMVB3zfdmGRZi5qKCbEjDkPrh2gIHnQoYs"></guidap-activity-details-button>
     </div>
   );
 }

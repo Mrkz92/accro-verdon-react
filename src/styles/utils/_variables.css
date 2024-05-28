@@ -1,0 +1,20 @@
+:root {
+  --light: #ffffff;
+  --lighter: rgba(255, 255, 255, 0.8);
+  --darker: #000000;
+
+  --first: #5bc0eb;
+  --second: #fde74c;
+  --third: #9bc53d;
+  --fourth: #c3423f;
+  --fifth: #404e4d;
+
+  --stage1: #9bc53d;
+  --stage2: #5bc0eb;
+  --stage3: #ef3f36;
+  --stage4: #92278f;
+  --stage5: #ffffff;
+
+  --facebook: #1877f2;
+  --instagram: linear-gradient(49.2deg, #f9ed32 10%, #ee2a7b 55%, #002aff);
+}

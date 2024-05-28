@@ -2,6 +2,7 @@
 @import "../styles/utils/mixins.scss";
 
 .Layout {
+    position: relative;
     min-height: 100%;
     min-width: 100%;
     display: flex;
@@ -17,5 +18,9 @@
 
     &__Footer {
         order: 1;
+    }
+
+    &--notFound {
+        height: 100vh;
     }
 }

@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import logo from "../assets/icons/logo+name-s.png";
 import "./Footer.scss";
 
@@ -45,7 +46,7 @@ export default function Footer({ context }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="ri-facebook-circle-fill facebook__logo"></i>
+              <i className="ri-instagram-fill instagram__logo"></i>
             </a>
           </li>
           <li className="Footer__social--link facebook">
@@ -54,13 +55,13 @@ export default function Footer({ context }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="ri-instagram-fill instagram__logo"></i>
+              <i className="ri-facebook-circle-fill facebook__logo"></i>
             </a>
           </li>
         </ul>
         <ul className="Footer__legal">
           <li className="legal">
-            <a href="">Mentions légales</a>
+            <NavLink to="/mentions">Mentions légales</NavLink>
           </li>
           <li className="copyright">
             <span>© 2024 Accro Verdon. All rights reserved</span>

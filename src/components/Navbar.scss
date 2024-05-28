@@ -30,9 +30,11 @@
 
     &__item {
         font-size: 20px;
+        font-weight: 600;
         color: $darker;
         text-transform: none;
-        @include font;
+        @include font($font-weight: 600);
+        font-size: 20px;
 
         &:hover {
             scale: 1.1;
@@ -44,18 +46,53 @@
         }
     }
 
-    .nav__toggle,
-    .nav__close {
+}
+
+.menuBtn {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .Navbar__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 0;
+        text-align: center;
+        opacity: 1;
+        position: absolute;
+        z-index: -200;
+        overflow: hidden;
+        top: 6rem;
+        right: 0;
+        height: calc(100vh - 6.5rem);
+        max-width: 400px;
+        width: 100%;
+        padding: 30px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        transform: scaleX(0);
+        transform-origin: 100% -50%;
+        transition: all 0.3s ease-in-out;
+
+        .Navbar__item {
+            font-size: 1.5rem;
+            @include font($font-weight: 600, $letter-spacing: 10px);
+        }
+
+        &--open {
+            background-color: $lighter;
+            opacity: 1;
+            transform: scaleX(100%)
+        }
+
+    }
+
+    .menuBtn {
+        display: flex;
         font-size: 1.5rem;
         color: var(--title-color);
         cursor: pointer;
-    }
-}
-
-@media screen and (max-width: 1150px) {
-    .Navbar__menu {
-        width: 80%;
-        height: 100%;
-        transition: right 0.4s;
     }
 }
