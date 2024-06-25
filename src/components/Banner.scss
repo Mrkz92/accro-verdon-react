@@ -45,4 +45,16 @@
       animation: bounceLogo .5s ease-out;
     }
   }
+
+  @media screen and (min-width:450px) and (max-width: 600px) {
+    .Banner__image {
+      top: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 449px) {
+    .Banner__image {
+      top: 4rem;
+    }
+  }
 }

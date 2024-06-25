@@ -1,12 +1,10 @@
 import React from "react";
 import Container from "../components/Container";
 import Layout from "../components/Layout";
-import birthdayCard from "../assets/pictures/anniversaire-1.jpg";
+import birthdayCard from "../assets/pictures/anniversaire-1.png";
 import Guidap from "../components/Guidap";
 
 export default function Reservation(context) {
-  // Ajoutez ici votre logique de réservation
-
   return (
     <div className="Reservation">
       <Layout context="reservation">

@@ -1,4 +1,7 @@
+@import "../styles/utils/variables.scss";
+
 .VideoIntro {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,5 +17,19 @@
         height: 80%;
         object-fit: cover;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    button {
+        position: absolute;
+        top: 7rem;
+        left: 2rem;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $lighter;
+
+        i {
+            font-size: larger;
+        }
     }
 }
